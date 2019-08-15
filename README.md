@@ -1,5 +1,7 @@
 # DobryTowar
 
+![DobryTowar logo](https://github.com/Oskarovsky/DobryTowar/blob/master/logo.png)
+
 It's application dedicated for handling orders placed by clients who wants buy products from countryside farm.
 This application includes frontend side only.
 
