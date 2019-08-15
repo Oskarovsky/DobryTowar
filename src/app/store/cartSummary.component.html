@@ -1,12 +1,12 @@
 <div class="float-right">
   <small>
-    Your cart:
+    Twój koszyk:
     <span *ngIf="cart.itemCount > 0">
-      {{ cart.itemCount }} item(s)
+      {{ cart.itemCount }} produkt(ów)
       {{ cart.cartPrice | currency:"PLN":"symbol":"2.2-2" }}
     </span>
     <span *ngIf="cart.itemCount == 0">
-      (empty)
+      (pusty)
     </span>
   </small>
   <button class="btn btn-sm bg-dark text-white"
