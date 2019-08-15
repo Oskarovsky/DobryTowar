@@ -20,18 +20,22 @@
         <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
           <h4>
             {{ product.name }}
-            <button class="btn btn-success btn-sm float-right"
-                  (click)="addProductToCart(product)">
-            Add To Cart
-          </button>
+            <span class="sm badge bagde-pill bagde-primary float-right" 
+                  style="font-size: 12px; color: gray">
+                / ilosc: {{ product.amount }}
+              </span>
             <span class="badge bagde-pill bagde-primary float-right">
               {{ product.price | currency:"PLN":"symbol":"2.2-2" }}
             </span>
           </h4>
+
           <div class="card-text bg-white p-1">
             {{ product.description }}
             <span class="badge bagde-pill bagde-primary float-right">
-              ilosc: {{ product.amount }}
+              <button class="btn btn-success btn-sm float-right"
+                  (click)="addProductToCart(product)">
+            Add To Cart
+            </button>
             </span>
           </div>
         </div>
