@@ -1,17 +1,22 @@
 <div class="container-fluid">
     <div class="row">
-      <div class="col bg-dark text-white">
-        <a class="navbar-brand">MARKET DobryTowar</a>
+      <div class="col bg text-white" style="background-color: #AA3232; text-align: center">
+        <a class="navbar-brand" style="font-size: 35px">DobryTowar</a>
+        <img src="../../assets/tractor.png" height="80"/>
         <cart-summary></cart-summary>
       </div>
     </div>
     <div class="row">
       <div class="col-3 p-2">
-        <button class="btn btn-block btn-outline-primary"
+        <button class="btn btn-block btn-success"
           (click)="changeCategory()">Strona główna
         </button>
+        <div>Farma: Sebek M.</div>
+        <div>Region: Mazowsze</div>
+        <br />
+        <div style="text-align: center; background: green; font-size: 20px">Kategorie</div>
         <button *ngFor="let cat of categories"
-                class="btn btn-outline-primary btn-block"
+                class="btn-sm btn-outline-primary btn-block"
                 [class.active]="cat == selectedCategory"
           (click)="changeCategory(cat)">{{ cat }}
         </button>
@@ -22,10 +27,10 @@
             {{ product.name }}
             <span class="sm badge bagde-pill bagde-primary float-right" 
                   style="font-size: 12px; color: gray">
-                / ilosc: {{ product.amount }}
+                / {{ product.amount }}
               </span>
             <span class="badge bagde-pill bagde-primary float-right">
-              {{ product.price | currency:"PLN":"symbol":"2.2-2" }}
+              {{ product.price | currency:"PLN ":"symbol":"1.2-2" }}
             </span>
           </h4>
 
