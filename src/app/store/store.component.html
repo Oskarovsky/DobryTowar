@@ -8,13 +8,14 @@
     </div>
     <div class="row">
       <div class="col-3 p-2">
-        <button class="btn btn-block btn-success"
+        <button class="btn btn-block" style="color: white; background: rgb(46, 38, 38)"
           (click)="changeCategory()">Strona główna
         </button>
         <div>Farma: Sebek M.</div>
         <div>Region: Mazowsze</div>
         <br />
-        <div style="text-align: center; background: green; font-size: 20px">Kategorie</div>
+        <div style="text-align: center; background: rgb(53, 45, 45); 
+          font-size: 20px; color: white">Kategorie</div>
         <button *ngFor="let cat of categories"
                 class="btn-sm btn-outline-primary btn-block"
                 [class.active]="cat == selectedCategory"
