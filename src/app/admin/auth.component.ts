@@ -3,7 +3,7 @@ import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
 
 @Component({
-    templateUrl: "auth.component.ts"
+    templateUrl: "auth.component.html"
 })
 export class AuthComponent {
     public username: String;
