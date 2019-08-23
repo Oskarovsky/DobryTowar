@@ -9,4 +9,9 @@ export class AdminComponent {
 
     constructor(private auth: AuthService,
         private router: Router) { }
+
+    logout() {
+        this.auth.clear();
+        this.router.navigateByUrl("/")
+    }
 }
